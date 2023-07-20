@@ -7,14 +7,17 @@ function App() {
     firstname : "Mona",
     lastname : "Shah"
   };
-  const formatUser = (user) => {
-    return user.firstname + " " + user.lastname;
+  const getGreetings = (user) => {
+    if(user){
+      return user.firstname + " " + user.lastname;
+    }
+    return <h1>Stranger!</h1>;
   }
   return (
     <div>
       <div>
         {element}
-        {formatUser(user)}
+        {getGreetings()}
       </div>
     </div>
   );
